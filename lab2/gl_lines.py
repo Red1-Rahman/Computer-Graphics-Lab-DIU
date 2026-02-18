@@ -1,7 +1,6 @@
 from OpenGL.GL import *
 from OpenGL.GLUT import *
 
-
 def iterate():
     glViewport(0, 0, 500, 500)
     glMatrixMode(GL_PROJECTION)
@@ -19,6 +18,8 @@ def showScreen():
     glPointSize(13)
     glBegin(GL_POINTS)
     glVertex2f(250, 250)
+    glVertex2f(30,30)
+    glVertex2f(480,450)
     glEnd()
 
     glLineWidth(10)
