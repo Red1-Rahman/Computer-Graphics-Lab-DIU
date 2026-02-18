@@ -6,6 +6,14 @@ activities:
 -connect points   
 
 
-#lab 2 (DD/01/2026)
+#lab 2 (18/02/2026)   
 
-activities:
+activities:   
+-gl triangle   
+-drawing house   
+-drawin name and ID using gl lines and gl points   
+
+#lab 3 (DD/MM/2026)   
+
+activities:   
+-
