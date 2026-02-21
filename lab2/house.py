@@ -65,6 +65,12 @@ def showScreen():
         glVertex2f(*pt)
     glEnd()
 
+    #doorKnob
+    glPointSize(6)
+    glBegin(GL_POINTS)
+    glVertex2f(320, 182)
+    glEnd()
+
     glutSwapBuffers()
 
 glutInit()
