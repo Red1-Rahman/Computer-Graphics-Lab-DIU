@@ -12,7 +12,7 @@
 - Drawing house  
 - Drawing name and ID using GL lines and GL points  
 
-# Lab 3 (DD/MM/2026)
+# Lab 3 (04/03/2026)
 
 **Activities:**  
 - 
