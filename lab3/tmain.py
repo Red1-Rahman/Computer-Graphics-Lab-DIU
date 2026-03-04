@@ -33,6 +33,10 @@ def keyboard(key, x, y):
     if key == b'+':
         scaleX += Sx
         scaleY += Sy
+    
+    if key == b'-':
+        scaleX -= Sx
+        scaleY -= Sy
 
 
 
