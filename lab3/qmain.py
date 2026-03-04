@@ -32,7 +32,7 @@ def keyboard(key, x, y):
     global angleZ
 
 
-    if key == b'Z': angleZ += stepZ
+    if key == b'z': angleZ += stepZ
     if key == b'x': angleZ -= stepZ
     
 
