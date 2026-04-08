@@ -14,7 +14,7 @@ paddleY   = 30.0       # fixed height of the paddle from the bottom
 step      = 15.0       # how many pixels the paddle moves per key press
 
 spriteW   = 200         # width  to draw the sprite on screen
-spriteH   = 60         # height to draw the sprite on screen
+spriteH   = 150         # height to draw the sprite on screen
 tex_id    = None       # will hold the loaded texture ID
 
 score     = 0          # starts at 0, increases by 10 each catch
@@ -232,7 +232,7 @@ glutCreateWindow(b"Catch the Points - reach 100!")
 
 init()
 
-tex_id = load_texture("ali.png")             # load ali.png — must be in the same folder as this file
+tex_id = load_texture("broken_dummy_with_halo.png")             # load ali.png — must be in the same folder as this file
 
 glutDisplayFunc(display)                      # GLUT calls display() when screen needs drawing
 glutKeyboardFunc(keyboard)                    # GLUT calls keyboard() when a key is pressed

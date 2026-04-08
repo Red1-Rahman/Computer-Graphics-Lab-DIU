@@ -50,7 +50,7 @@ def draw_text(x, y, text):
 def is_touching(ax, ay, bx, by):
     dx = ax - bx
     dy = ay - by
-    return math.sqrt(dx*dx + dy*dy) < 20
+    return math.sqrt(dx*dx + dy*dy) < 15
 
 # ─────────────────────────────────────
 #  DISPLAY
