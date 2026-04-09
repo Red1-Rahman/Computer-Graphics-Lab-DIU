@@ -1,7 +1,9 @@
 from OpenGL.GL import *
 from OpenGL.GLUT import *
 from OpenGL.GLU import *
+from pathlib import Path
 from PIL import Image
+from OpenGL.GLUT import GLUT_BITMAP_HELVETICA_18
 
 # ─────────────────────────────────────
 #  CONSTANTS
@@ -25,13 +27,15 @@ cur2X, cur2Y = 2, 0    # Player 2 cursor starts bot-right (col=2, row=0)
 
 tex_x = None            # texture ID for X sprite
 tex_o = None            # texture ID for O sprite
+ASSET_DIR = Path(__file__).resolve().parent
 
 # ─────────────────────────────────────
 #  TEXTURE LOADER
 # ─────────────────────────────────────
 
 def load_texture(filename):
-    img  = Image.open(filename).convert("RGBA")   # open image, force 4 channels (RGBA)
+    img_path = ASSET_DIR / filename
+    img  = Image.open(img_path).convert("RGBA")   # open image, force 4 channels (RGBA)
     img  = img.transpose(Image.FLIP_TOP_BOTTOM)   # flip vertically — OpenGL reads bottom-up
     data = img.tobytes()                          # convert to raw bytes for OpenGL
 
@@ -338,8 +342,8 @@ glutCreateWindow(b"Tic Tac Toe - P1: WASD+F  P2: IJKL+H")  # window title
 
 init()                          # run OpenGL setup
 
-tex_x = load_texture("heart.png")  # load X sprite — must be in same folder
-tex_o = load_texture("brain.png")  # load O sprite — must be in same folder
+tex_x = load_texture("heart.png")  # load X sprite from Lab6/
+tex_o = load_texture("brain.png")  # load O sprite from Lab6/
 
 glutDisplayFunc(display)        # register display callback
 glutKeyboardFunc(keyboard)      # register keyboard callback
